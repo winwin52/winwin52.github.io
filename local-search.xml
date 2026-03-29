@@ -31,33 +31,6 @@
   
   
   <entry>
-    <title>电赛回忆录：那4天3夜，刻进了我半段大学青春</title>
-    <link href="/2026/03/29/%E7%94%B5%E8%B5%9B%E5%9B%9E%E5%BF%86%E5%BD%95%EF%BC%9A%E9%82%A34%E5%A4%A93%E5%A4%9C%EF%BC%8C%E5%88%BB%E8%BF%9B%E4%BA%86%E6%88%91%E5%8D%8A%E6%AE%B5%E5%A4%A7%E5%AD%A6%E9%9D%92%E6%98%A5-1/"/>
-    <url>/2026/03/29/%E7%94%B5%E8%B5%9B%E5%9B%9E%E5%BF%86%E5%BD%95%EF%BC%9A%E9%82%A34%E5%A4%A93%E5%A4%9C%EF%BC%8C%E5%88%BB%E8%BF%9B%E4%BA%86%E6%88%91%E5%8D%8A%E6%AE%B5%E5%A4%A7%E5%AD%A6%E9%9D%92%E6%98%A5-1/</url>
-    
-    <content type="html"><![CDATA[<p><em>原创 win win W 书局重建 2026年3月23日 02:22 11人</em></p><p><span style="font-style: italic; font-weight: bold;">今夜，和我同寝的电赛队友洗衣时，忽然撞开了记忆的闸门。我们聊起2025年7月那场全国大学生电子设计竞赛，那些被我刻意封存的细节瞬间翻涌上来，漫过了整个思绪。我忍不住点开公众号编辑页，敲下这些迟来的文字。</span></p><p>先交代一句，那年我们选了C题——基于单目视觉的目标物测量装置，最终只拿了个参与奖。</p><p>整场比赛只有4天3夜，乍看不过是大学生涯里短短一段插曲。<strong>可在赛后无数个不甘的深夜里，我把这段日子翻来覆去地复盘拆解，它在我的记忆里被无限拉长、放大。</strong>如今回头看，我的本科记忆像被掰成了三块：40%属于这场电赛，40%留给了生物医学工程创新设计竞赛，只剩20%，分给了那些平平无奇的日常。这话听着夸张，可只有我自己知道，它有多真切。</p><p>比赛结束后，我总揪着过程里的每一个细节反复琢磨。以下，是我以亲历者的视角，对这段日子的全部复盘。</p><h2 id="一、赛前"><a href="#一、赛前" class="headerlink" title="一、赛前"></a>一、赛前</h2><p>先说说<strong>备赛</strong>。现在回头看，从一开始，我们就埋下了致命的隐患。作为队长，我执意避开了最热门的控制类题目——怕扎堆、怕同质化，我总想着要走差异化的路；可电源、信号类的专业赛道，我们又毫无技术积累，根本不敢碰。最后我给团队定的方向，是听起来格外潇洒的”随机应变”。</p><p><strong>现在想来，这哪里是胸有成竹，分明是对自己、对队友的不负责任。</strong>备赛的日子里，我们没有深耕任何一个赛道，只忙着”投机”——专挑往届那些介于控制类和专业赛道之间的题目复刻，哪怕效果不尽如人意，也还是抱着侥幸心理继续。而助长我这份侥幸的，正是当时风头正盛的大语言模型，谷歌的Gemini成了我最依赖的”拐杖”。<strong>它太聪明了，聪明到让我彻底放下了心，忘了自己本该踩实的每一步。</strong></p><p>可命运偏偏给我们递了颗<strong>糖</strong>。赛题公布的那一刻，我们一眼就盯住了C题。屏幕、摄像头、主控板，题目要求的硬件我们全有；更巧的是，备赛时我刚啃了很久的串口屏调试，正好能用上。<strong>夸张的说，很像是为我们量身定做的题目。</strong></p><p>我们几乎没犹豫，当场就定了这道题。</p><p><em>(现在很晚了，笔者有点困了，明天再继续写，晚安)</em></p><h2 id="二、赛后"><a href="#二、赛后" class="headerlink" title="二、赛后"></a>二、赛后</h2><p>忽然想起中小学时的语文考试，总怕写不够字数，可到了收卷的那一刻，从来都能把格子填得满满当当。这场电赛也是一样——哪怕全程都在怕完不成，可到了封箱的那一刻，我们还是把<strong>完整</strong>的作品放在了箱里，甚至有好几次测试，<strong>结果漂亮得让我们几个人忍不住欢呼。</strong></p><p>好了，讲正题，在树莓派上安装OpenClaw。我是参考一个科技博客来安装的，省了不少事。</p><p>参考网址：<a href="https://www.cnblogs.com/rsls/p/19606304">树莓派安装OpenClaw</a></p><p>随着时间的推移，OpenClaw也做出了很多的更新，导致博客内的有些步骤执行不了。本文来补充完善一下。首先说明我的配置是：</p><h3 id="一、给树莓派更新"><a href="#一、给树莓派更新" class="headerlink" title="一、给树莓派更新"></a>一、给树莓派更新</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> apt update<br><span class="hljs-built_in">sudo</span> apt full-upgrade<br></code></pre></td></tr></table></figure><h3 id="二、环境布置"><a href="#二、环境布置" class="headerlink" title="二、环境布置"></a>二、环境布置</h3><h4 id="1、ARM64架构的Node-js安装"><a href="#1、ARM64架构的Node-js安装" class="headerlink" title="1、ARM64架构的Node.js安装"></a>1、ARM64架构的Node.js安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 下载ARM64版本的Node.js</span><br>wget https://nodejs.org/dist/v24.13.0/node-v24.13.0-linux-arm64.tar.xz<br><br><span class="hljs-comment"># 解压</span><br>tar -xf node-v24.13.0-linux-arm64.tar.xz<br><br><span class="hljs-comment"># 移动到系统目录</span><br><span class="hljs-built_in">sudo</span> <span class="hljs-built_in">mv</span> node-v24.13.0-linux-arm64 /usr/local/node<br><br><span class="hljs-comment"># 配置环境变量</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=/usr/local/node/bin:$PATH&#x27;</span> &gt;&gt; ~/.bashrc<br><span class="hljs-built_in">source</span> ~/.bashrc<br><br><span class="hljs-comment"># 验证安装</span><br>node --version<br></code></pre></td></tr></table></figure><p>输出：<code>v24.13.0</code></p><h4 id="2、安装OpenClaw-CLI"><a href="#2、安装OpenClaw-CLI" class="headerlink" title="2、安装OpenClaw CLI"></a>2、安装OpenClaw CLI</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 配置npm全局目录</span><br><span class="hljs-built_in">mkdir</span> ~/.npm-global<br>npm config <span class="hljs-built_in">set</span> prefix <span class="hljs-string">&#x27;~/.npm-global&#x27;</span><br><span class="hljs-built_in">echo</span> <span class="hljs-string">&#x27;export PATH=~/.npm-global/bin:$PATH&#x27;</span> &gt;&gt; ~/.bashrc<br><span class="hljs-built_in">source</span> ~/.bashrc<br><br><span class="hljs-comment"># 使用国内镜像</span><br>npm config <span class="hljs-built_in">set</span> registry https://registry.npmmirror.com<br><br><span class="hljs-comment"># 安装OpenClaw</span><br>npm install -g openclaw@latest<br></code></pre></td></tr></table></figure><p>接下来可以输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">openclaw --version<br></code></pre></td></tr></table></figure><p>安装成功，则输出版本号。</p><p>执行到这，说明OpenClaw就安装成功了。</p><p><img src="https://winwin52.github.io/img/posts/esports_memory.jpeg" alt="电赛记忆配图"><br><em>4天3夜的电赛回忆</em></p>]]></content>
-    
-    
-    <categories>
-      
-      <category>生活感悟</category>
-      
-    </categories>
-    
-    
-    <tags>
-      
-      <tag>电赛</tag>
-      
-      <tag>回忆录</tag>
-      
-    </tags>
-    
-  </entry>
-  
-  
-  
-  <entry>
     <title>Hello World</title>
     <link href="/2026/03/27/hello-world/"/>
     <url>/2026/03/27/hello-world/</url>
